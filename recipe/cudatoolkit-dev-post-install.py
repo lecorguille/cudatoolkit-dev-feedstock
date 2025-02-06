@@ -153,6 +153,7 @@ class LinuxExtractor(Extractor):
                     .format(' '.join(cmd), toolkitpath))
 
             self.copy_files(toolkitpath, self.src_dir)
+            os.chmod(src_file, 0o755)
         os.remove(runfile)
 
 
